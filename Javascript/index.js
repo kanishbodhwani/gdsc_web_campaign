@@ -2,12 +2,13 @@
 
 // 1. Number
 // 2. BigInt // 123921903901209381n
-// 3. String
-// 4. Boolean
-// 5. Null
-// 6. Undefined
+// 3. String // "" '' 
+// 4. Boolean // 
+// 5. Null 
+// 6. Undefined === value 
 // 7. Symbol // Symbol("id")
 
+// var a = Symbol("session is going great!");
 
 // Reference types
 
@@ -25,10 +26,19 @@
 
 // Let --> is block level 
 
-// for(let i = 0; i < 3; i++) {
-// console.log(i) --> it will console here
+// var a = "Kanish"; // Global Scope
+
+// {
+//     let a = "Hriday";   // Block scope
+//     console.log(a);
 // }
-// console.log(i) ---> Not here
+
+
+// for(var i = 0; i < 3; i++) {
+//     console.log(i) 
+// }
+
+// console.log(i);
 
 
 // Var is for variables available to the entire function 
@@ -42,8 +52,8 @@
 // Template strings 
 
 // (function() {
-// let name = "John Doe";
-// console.log(`Hello ${name}`);
+//     let name = "John Doe";
+//     console.log("Hello " + `${name}`);
 // })();
 
 // falsy values
@@ -52,8 +62,10 @@
 // ""
 // null
 // undefined
-// NaN
+// NaN = Not a Number 
 // false
+
+
 
 // if(undefined) {
 //     console.log("I am true");
@@ -70,9 +82,9 @@
 
 // Logical operators
 
-// && --> and
-// || --> or
-// ! --> not
+// && --> and // any value is false ... => the whole condition is false 
+// || --> or // any value true => the whole condition is true
+// ! --> not 
 
 // OR '||' operator finds the first truthy value
 // const result = value1 || value2 || value3; what is wrong in this code?
@@ -86,30 +98,46 @@
 // null || undefined ?? "foo"; // 
 
 
+// if(!undefined) {
+//     console.log("true")
+// }
+
 
 // Comparison operators
 // console.log(5 == "5")
 
+// == // value
+// === // value and type
 
+// if(5 === "5") {
+//     console.log("true or false");
+// }
 
 // Functions
 
-// function add(a, b) {
-//     return a + b;
-// }
+// ES5 function 
 
+function printName(name) {
+    console.log(name);
+    // return name;
+}
+// printName("kanish")
 // console.log(add(1, 2));
 
-// IIFE
+// IIFE 
 
 // (function() {
 //     console.log("I am IIFE");
 // })();
+
 // (function() {
 //     console.log("I am IIFE");
 // }());
 
 // Arrow functions
+
+// ES5 === version 5 
+// ES6 === version 6 
 
 // const add = (a, b) => {
 //     return a + b;
@@ -117,11 +145,13 @@
 
 // console.log(add(1, 2));
 
-// const add = (a, b) => a + b;
+// const add = (a, b) => a + b;    
 
 
 // Default parameters
-// const add = (a = 0, b = 0) => a + b; 
+// const add = (a = 0,b = 0) => a + b; 
+
+// console.log(add());
 
 // Anonymous functions
 // no specified name 
@@ -136,7 +166,8 @@
 //     }
 // }
 
-// console.log(person.name);
+// person.age = 20;
+// console.log(person.age);
 
 
 // Advanced concepts 
@@ -156,7 +187,7 @@
 
 // Arrays
 
-// const numbers = [1, 2, 3, 4, 5];
+const numbers = [1,2,3,4,5];
 
 // console.log(numbers[0]);
 
@@ -168,7 +199,7 @@
 // numbers.unshift(0);
 // numbers.pop();
 // numbers.shift();
-// numbers.splice(2, 1);
+// console.log(numbers.splice(2, 2));
 // numbers.reverse();
 // numbers.sort();
 // numbers.concat([6, 7, 8]);
@@ -184,10 +215,11 @@
 
 // map 
 
-// const mapped = numbers.map(function(value) {
-//     return value * 2;
+// const mapped = numbers.map((val) => {
+//     return val * 2;
 // });
 
+// console.log(filtered);
 
 // reduce
 
@@ -228,17 +260,16 @@
 
 // console.log(person['name'])
 
-// const { name, age } = person;
-
+// const { name, age, greet } = person;
+// console.log(name)
 
 // Spread 
 
 // const person2 = {
 //     ...person,
-//     name: "Rohan"
 // }
 
-// // console.log(person2);
+// console.log(person2);
 
 // person2.greet()
 
