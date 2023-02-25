@@ -68,7 +68,8 @@ li {
 
 .ship{
     height: 30vh;
-    margin: 10%;
+    position: relative;
+    margin: 10% 3%;
     animation: ship 3s linear infinite;
 }
 
